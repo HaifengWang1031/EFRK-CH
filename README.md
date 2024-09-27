@@ -11,7 +11,7 @@ In this work, we develop a class of up to third-order energy-stable schemes for 
 ## Citation
 
 ```
-@ article{wang2024exponential,
+@article{wang2024exponential,
 title={An exponential-free Runge–Kutta framework for developing third-order unconditionally energy stable schemes for the Cahn–Hilliard equation},
 author={Haifeng, Wang and Hone, Zhang and Xu, Qian and Songhe, Song},
 journal={},
