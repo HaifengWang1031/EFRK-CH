@@ -1,4 +1,4 @@
-# Exponential free Runge--Kutta (EFRK) Method for Cahn-Hilliard equation
+# Exponential free Runge--Kutta (EFRK) Method for Cahn--Hilliard equation
 
 Code accompanying the paper "An exponential-free Runge–Kutta framework for developing third-order
 unconditionally energy stable schemes for the Cahn-–Hilliard equation" by Haifeng Wang, Hong Zhang, Qian Xu, and Songhe Song.
