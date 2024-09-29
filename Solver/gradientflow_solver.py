@@ -206,10 +206,8 @@ class Gradient_Flow_Solver():
         fUn  = self.ft(Un)
         fUn1 = self.Sl * fUn
 
-        fUn21 = fUn1 + self.tau * 1 / 3 * self.Nk(fUn1,tn)
-        fUn22 = fUn1 + self.tau * 2 / 3 * self.Nk(fUn21,tn + 1 / 3*self.tau)
-        fUn23 = fUn1 + self.tau * 1 / 4 * self.Nk(fUn1,tn) + self.tau * 3 / 4 *self.Nk(fUn22,tn + 2 / 3 * self.tau)
-        return self.ift(fUn23).real
+        fUn2 = fUn1 + self.tau * self.Nk(fUn1,tn)
+        return self.ift(fUn2).real
 
     def StrangSplitting(self,Un,tn):
         self.Sl = np.exp(1/2*self.tau*self.Lk)
@@ -217,11 +215,10 @@ class Gradient_Flow_Solver():
         fUn  = self.ft(Un)
         fUn1 = self.Sl*fUn
 
-        fUn21 = fUn1 + self.tau * 1 / 3 * self.Nk(fUn1,tn)
-        fUn22 = fUn1 + self.tau * 2 / 3 * self.Nk(fUn21,tn + 1 / 3*self.tau)
-        fUn23 = fUn1 + self.tau * 1 / 4 * self.Nk(fUn1,tn) + self.tau * 3 / 4 *self.Nk(fUn22,tn + 2 / 3 * self.tau)
+        fUn21 = fUn1 + self.tau * self.Nk(fUn1,tn)
+        fUn22 = fUn1 + self.tau * 1 / 2 * self.Nk(fUn21,tn + 1 / 2*self.tau)
 
-        fu3 = self.Sl * fUn23
+        fu3 = self.Sl * fUn22
         return self.ift(fu3).real
 
     def solve(self,t_span,tau):
