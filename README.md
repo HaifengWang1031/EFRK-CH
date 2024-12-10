@@ -12,11 +12,9 @@ In this work, we develop a class of up to third-order energy-stable schemes for 
 
 ```
 @article{wang2024exponential,
-title={An exponential-free Runge–Kutta framework for developing third-order unconditionally energy stable schemes for the Cahn–Hilliard equation},
-author={Haifeng, Wang and Hone, Zhang and Xu, Qian and Songhe, Song},
-journal={},
-pages={},
-year={}
-publisher={}
+  title={An exponential-free Runge--Kutta framework for developing third-order unconditionally energy stable schemes for the Cahn--Hilliard equation},
+  author={Wang, Haifeng and Sun, Jingwei and Zhang, Hong and Qian, Xu and Song, Songhe},
+  journal={arXiv preprint arXiv:2411.16271},
+  year={2024}
 }
 ```
